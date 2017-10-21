@@ -1,16 +1,20 @@
 window.onload = function(){
 
 
-var book = document.getElementById("boundary1");
 
-book.addEventListener("mouseover", function() {
-
-
-	book.setAttribute("class","boundary youlose");
-});
-
+var boun = document.querySelectionorAll("div#maze div.boundary");
+	for (var p=0; p<boun.length; p++)
+	{
+		boun[p].addEventListener("mouseover",redTurn);
+	}
 
 
 
 
+}
+function redTurn(){
+	var boun= document.querySelectionorAll("div#maze div.boundary");
+	for (var p =0;p< boun.length ; p++) {
+		allboun[p].setAttribute("class","boundary youlose");
+	}
 }
