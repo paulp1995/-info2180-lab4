@@ -27,8 +27,6 @@ var boun = document.querySelectorAll("div#maze div.boundary");
 
 
 function redTurn (){
-
-	
 	chec = true;
 		var boun = document.querySelectionorAll("div#maze div.boundary");
 		for (var p =0;p< boun.length ; p++) {
@@ -37,11 +35,13 @@ function redTurn (){
 }
 
 function gameEnd(){
+    var ss=document.getElementById("status");
+
 	if (chec){
-		alert("game over! You lost.");
+		ss.innerHTML="game over! You lost.";
 	}
 	else {
-		alert("great job! You won ");
+		ss.innerHTML = "great job! You won ";
 	}
 }
 
